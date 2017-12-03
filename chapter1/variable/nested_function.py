@@ -4,9 +4,10 @@
 #!/usr/bin/python3
 
 def greeting(name):
+    greeting_msg = "Hello "
 
     def add_name():
-        return ("Hello %s" % name)
+        return ("%s%s" % (greeting_msg, name))
 
     msg = add_name()
     print (msg)
