@@ -1,5 +1,5 @@
 ###################################
-# File Name : class_instead.py
+# File Name : closure_misuse.py
 ###################################
 #!/usr/bin/python3
 
