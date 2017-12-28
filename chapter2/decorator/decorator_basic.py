@@ -3,18 +3,18 @@
 ###################################
 #!/usr/bin/python3
 
-def decorator_func(func):
-    def wrapper_func():
+def deco(func):
+    def wrapper():
         print ("before")
         ret = func()
         print ("after")
         return ret
-    return wrapper_func
+    return wrapper
 
-@decorator_func
-def base_func():
+@deco
+def base():
     print ("base function")
 
 
 print ("=== Run decorator ===")
-base_func()
+base()
