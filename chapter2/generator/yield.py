@@ -1,18 +1,19 @@
 ###################################
-# File Name : yield_input.py
+# File Name : yield.py
 ###################################
 #!/usr/bin/python3
 
 def gen():
-    exponent = 2
-
+    value = 1
     while True:
-        exponent = 2 ** (yield exponent)
+        value = yield value
 
 
 print ("=== print gen function ===")
 g = gen()
 
 print (next(g))
-print (g.send(3))
+print (g.send(2))
+print (g.send(10))
 print (g.send(5))
+print (next(g))

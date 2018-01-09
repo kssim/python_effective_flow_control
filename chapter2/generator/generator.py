@@ -3,17 +3,17 @@
 ###################################
 #!/usr/bin/python3
 
-def generator(items):
+def gen(items):
     count = 0
 
     for item in items:
         if count == 10:
-            return item
+            return -1
 
         count += 1
         yield item
 
 
-print ("=== print generator ===")
-for i in generator(range(15)):
+print ("=== print gen ===")
+for i in gen(range(15)):
     print (i)
