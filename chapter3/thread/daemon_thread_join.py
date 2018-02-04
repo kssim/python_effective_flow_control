@@ -11,13 +11,7 @@ import threading
 logging.basicConfig(level=logging.DEBUG, format="(%(threadName)s) %(message)s")
 
 def daemon():
-    logging.debug("start")
-    time.sleep(5)
-    logging.debug("Exit")
-
-
-def non_daemon():
-    logging.debug("start")
+    logging.debug("Start")
     time.sleep(5)
     logging.debug("Exit")
 
