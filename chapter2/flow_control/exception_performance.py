@@ -44,8 +44,9 @@ def check_runtime(func):
     print ("Run time summary : %s" % str(accumulate_time / 10))
 
 
-print ("=== Try Performance Test ===")
-check_runtime(write_file_only_try)
+if __name__ == "__main__":
+    print ("=== Try Performance Test ===")
+    check_runtime(write_file_only_try)
 
-print ("=== Try/Else Performance Test ===")
-check_runtime(write_file_try_else)
+    print ("=== Try/Else Performance Test ===")
+    check_runtime(write_file_try_else)

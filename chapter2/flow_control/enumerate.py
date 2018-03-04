@@ -16,8 +16,9 @@ def get_index_enumerate_method():
         print ("%d : %s" % (i, ch))
 
 
-print ("=== Basic method ===")
-get_index_basic_method()
+if __name__ == "__main__":
+    print ("=== Basic method ===")
+    get_index_basic_method()
 
-print ("=== Enumerate method ===")
-get_index_enumerate_method()
+    print ("=== Enumerate method ===")
+    get_index_enumerate_method()

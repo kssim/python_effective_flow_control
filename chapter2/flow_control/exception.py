@@ -18,8 +18,9 @@ def read_file(file_name):
         print ("End file read\n\n")
 
 
-print ("=== Exist file open ===")
-read_file(EXIST_FILE)
+if __name__ == "__main__":
+    print ("=== Exist file open ===")
+    read_file(EXIST_FILE)
 
-print ("=== Non-Exists file open ===")
-read_file(NON_EXIST_FILE)
+    print ("=== Non-Exists file open ===")
+    read_file(NON_EXIST_FILE)
