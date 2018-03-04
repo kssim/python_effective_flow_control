@@ -1,5 +1,5 @@
 ###################################
-# File Name : yield_from.py
+# File Name : return_coroutine.py
 ###################################
 #!/usr/bin/python3
 
@@ -9,7 +9,7 @@ def return_one_to_ten():
         yield i
 
 def get_coroutine():
-    yield from return_one_to_ten()
+    yield return_one_to_ten()
 
 
 if __name__ == "__main__":
@@ -17,6 +17,10 @@ if __name__ == "__main__":
     c = get_coroutine()
     print (c)
 
+    print ("== Get coroutine's return value ==")
+    ret = next(c)
+    print(ret)
+
     print ("== Get values ==")
-    print (next(c))
-    print (list(c))
+    print (next(ret))
+    print (list(ret))
