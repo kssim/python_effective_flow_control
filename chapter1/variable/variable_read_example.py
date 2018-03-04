@@ -14,9 +14,13 @@ def read_exception():
     msg = "World"
     print (msg)
 
+def main():
+    print ("=== first read ===")
+    read_work()
 
-print ("=== first read ===")
-read_work()
+    print ("=== second read ===")
+    read_exception()
 
-print ("=== second read ===")
-read_exception()
+
+if __name__ == "__main__":
+    main()

@@ -13,4 +13,5 @@ def greeting(name):
     print (msg)
 
 
-greeting("python")
+if __name__ == "__main__":
+    greeting("python")

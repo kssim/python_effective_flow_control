@@ -7,7 +7,8 @@ def normal_func():
     pass
 
 
-p = dir(normal_func())
+if __name__ == "__main__":
+    p = dir(normal_func())
 
-print ("=== attribute ===")
-print (p)
+    print ("=== attribute ===")
+    print (p)

@@ -1,5 +1,5 @@
 ###################################
-# File Name : nonlocal_keyword.py3
+# File Name : nonlocal_keyword.py3 (Python 3.0 or later)
 ###################################
 #!/usr/bin/python3
 
@@ -16,4 +16,5 @@ def greeting(name):
     print (msg)
 
 
-greeting("python")
+if __name__ == "__main__":
+    greeting("python")

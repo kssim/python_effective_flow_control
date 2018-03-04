@@ -11,9 +11,13 @@ def multiple_of_ten():
 
     return square
 
+def main():
+    print ("=== print result ===")
+    f = multiple_of_ten()
 
-print ("=== print result ===")
-f = multiple_of_ten()
+    print (f(2))
+    print (f(3))
 
-print (f(2))
-print (f(3))
+
+if __name__ == "__main__":
+    main()

@@ -14,10 +14,14 @@ def logger():
 
     return print_log
 
+def main():
+    log = logger()
+    print (log("Start."))
 
-log = logger()
-print (log("Start."))
+    time.sleep(10)
 
-time.sleep(10)
+    print (log("After 10 sec."))
 
-print (log("After 10 sec."))
+
+if __name__ == "__main__":
+    main()

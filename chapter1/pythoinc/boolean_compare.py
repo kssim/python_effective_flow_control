@@ -3,13 +3,18 @@
 ###################################
 #!/usr/bin/python3
 
-greeting = True
+def main():
+    greeting = True
 
-if greeting:
-    print ("no operation")
+    if greeting:
+        print ("no operation")
 
-if greeting == True:
-    print ("'==' operation")
+    if greeting == True:
+        print ("'==' operation")
 
-if greeting is True:
-    print ("'is' operaion")
+    if greeting is True:
+        print ("'is' operaion")
+
+
+if __name__ == "__main__":
+    main()

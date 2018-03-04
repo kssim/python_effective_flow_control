@@ -11,7 +11,8 @@ def calculator(x):
     return add
 
 
-print ("=== print calculation ===")
-f = calculator(10)
-print (f(5))
-print (f(10))
+if __name__ == "__main__":
+    print ("=== print calculation ===")
+    f = calculator(10)
+    print (f(5))
+    print (f(10))

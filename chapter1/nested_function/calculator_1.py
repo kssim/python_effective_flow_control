@@ -14,5 +14,6 @@ def calculator(x, y):
     return (add(), sub())
 
 
-print ("=== print calculation ===")
-print (calculator(10, 5))
+if __name__ == "__main__":
+    print ("=== print calculation ===")
+    print (calculator(10, 5))

@@ -3,7 +3,6 @@
 ###################################
 #!/usr/bin/python3
 
-
 def nested_func():
     def inner():
         pass
@@ -14,7 +13,8 @@ def nested_func():
     print (p)
 
 
-p = dir(nested_func())
+if __name__ == "__main__":
+    p = dir(nested_func())
 
-print ("=== attribute ===")
-print (p)
+    print ("=== attribute ===")
+    print (p)

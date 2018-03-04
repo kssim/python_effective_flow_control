@@ -3,7 +3,6 @@
 ###################################
 #!/usr/bin/python3
 
-
 def closure():
 
     def inner():
@@ -12,7 +11,8 @@ def closure():
     return inner
 
 
-p = closure()
+if __name__ == "__main__":
+    p = closure()
 
-print ("=== attribute closure ===")
-print (p.__closure__)
+    print ("=== attribute closure ===")
+    print (p.__closure__)

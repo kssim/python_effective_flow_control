@@ -3,7 +3,6 @@
 ###################################
 #!/usr/bin/python3
 
-
 def closure():
     x = 10
     def inner():
@@ -13,7 +12,8 @@ def closure():
     return inner
 
 
-p = closure()
+if __name__ == "__main__":
+    p = closure()
 
-print ("=== attribute closure ===")
-print (p.__closure__[0].cell_contents)
+    print ("=== attribute closure ===")
+    print (p.__closure__[0].cell_contents)

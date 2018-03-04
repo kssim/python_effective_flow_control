@@ -16,5 +16,6 @@ def outer_function():
     print ("outer_function scope: %s" % var_shadowing)
 
 
-outer_function()
-print ("global scope: %s" % var_shadowing)
+if __name__ == "__main__":
+    outer_function()
+    print ("global scope: %s" % var_shadowing)

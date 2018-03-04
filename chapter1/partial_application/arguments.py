@@ -15,10 +15,14 @@ def test(name, *args, **kwargs):
     for keyword, arg in kwargs.items():
         print ("Argument keyword : %s, arg : %s" % (keyword, arg))
 
+def main():
+    args = ["red", "blue", "first", "second"]
+    kwargs = {"red":"color", "blue":"color", "first":"number", "second":"number"}
 
-args = ["red", "blue", "first", "second"]
-kwargs = {"red":"color", "blue":"color", "first":"number", "second":"number"}
+
+    test("python", *args, **kwargs)
+    test("python", "red", "blue", "green", red="color", blue="color")
 
 
-test("python", *args, **kwargs)
-test("python", "red", "blue", "green", red="color", blue="color")
+if __name__ == "__main__":
+    main()

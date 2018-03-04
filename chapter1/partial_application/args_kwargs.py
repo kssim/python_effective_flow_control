@@ -13,9 +13,13 @@ def kwargs_test(**kwargs):
     for keyword, arg in kwargs.items():
         print ("Argument keyword : %s, arg : %s" % (keyword, arg))
 
+def main():
+    args = ["red", "blue", "first", "second"]
+    kargs = {"red":"color", "blue":"color", "first":"number", "second":"number"}
 
-args = ["red", "blue", "first", "second"]
-kargs = {"red":"color", "blue":"color", "first":"number", "second":"number"}
+    args_test(*args)
+    kwargs_test(**kargs)
 
-args_test(*args)
-kwargs_test(**kargs)
+
+if __name__ == "__main__":
+    main()
