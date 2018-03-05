@@ -28,5 +28,5 @@ def parameter_logger(func):
 def worker(delay_time):
     time.sleep(delay_time)
 
-
-worker(5)
+if __name__ == "__main__":
+    worker(5)

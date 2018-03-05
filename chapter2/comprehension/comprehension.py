@@ -29,14 +29,18 @@ def print_dict_with_for():
         result[k] = v
     print (result)
 
+def main():
+    print ("=== print list ===")
+    print (v_list)
+    print_list_with_comprehension()
+    print_list_with_for()
 
-print ("=== print list ===")
-print (v_list)
-print_list_with_comprehension()
-print_list_with_for()
+    print ("=== print dict ===")
+    print (v_dict_key)
+    print (v_dict_value)
+    print_dict_with_comprehension()
+    print_dict_with_for()
 
-print ("=== print dict ===")
-print (v_dict_key)
-print (v_dict_value)
-print_dict_with_comprehension()
-print_dict_with_for()
+
+if __name__ == "__main__":
+    main()

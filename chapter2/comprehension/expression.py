@@ -19,7 +19,11 @@ def print_generator(items):
     for item in items:
         print (item)
 
+def main():
+    print ("=== print list ===")
+    print_generator(generate_sample_list())
+    print_generator(generate_list_by_range())
 
-print ("=== print list ===")
-print_generator(generate_sample_list())
-print_generator(generate_list_by_range())
+
+if __name__ == "__main__":
+    main()

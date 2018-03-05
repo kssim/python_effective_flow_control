@@ -16,5 +16,6 @@ def base():
     print ("base function")
 
 
-print ("=== Run decorator ===")
-base()
+if __name__ == "__main__":
+    print ("=== Run decorator ===")
+    base()

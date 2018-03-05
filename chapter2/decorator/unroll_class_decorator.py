@@ -24,5 +24,6 @@ def worker(delay_time):
     time.sleep(delay_time)
 
 
-f = MeasureRuntime(worker)
-f(5)
+if __name__ == "__main__":
+    f = MeasureRuntime(worker)
+    f(5)

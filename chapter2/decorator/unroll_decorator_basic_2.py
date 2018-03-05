@@ -15,8 +15,9 @@ def base():
     print ("base function")
 
 
-print ("=== Run decorator ===")
-argument = base
-f = deco(argument)
+if __name__ == "__main__":
+    print ("=== Run decorator ===")
+    argument = base
+    f = deco(argument)
 
-f()
+    f()

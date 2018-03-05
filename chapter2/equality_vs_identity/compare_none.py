@@ -16,10 +16,15 @@ def check_performance(compare_expression, condition):
     results = timeit.Timer(compare_expression, setup=condition).repeat(100, 10000)
     return average(results)
 
-print ("=== compare x is not None ===")
-print ("identity : %s" % check_performance("x is None", "x = 1"))
-print ("equality : %s" % check_performance("x == None", "x = 1"))
+def main():
+    print ("=== compare x is not None ===")
+    print ("identity : %s" % check_performance("x is None", "x = 1"))
+    print ("equality : %s" % check_performance("x == None", "x = 1"))
 
-print ("=== compare x is None ===")
-print ("identity : %s" % check_performance("x is None", "x = None"))
-print ("equality : %s" % check_performance("x == None", "x = None"))
+    print ("=== compare x is None ===")
+    print ("identity : %s" % check_performance("x is None", "x = None"))
+    print ("equality : %s" % check_performance("x == None", "x = None"))
+
+
+if __name__ == "__main__":
+    main()

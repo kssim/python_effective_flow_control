@@ -26,9 +26,13 @@ def parameter_logger(func):
 def worker(delay_time):
     time.sleep(delay_time)
 
+def main():
+    argument = worker
+    f1 = parameter_logger(argument)
+    f2 = measure_run_time(f1)
 
-argument = worker
-f1 = parameter_logger(argument)
-f2 = measure_run_time(f1)
+    f2(5)
 
-f2(5)
+
+if __name__ == "__main__":
+    main()

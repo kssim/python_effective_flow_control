@@ -34,5 +34,6 @@ def non_active_worker(delay_time):
     time.sleep(delay_time)
 
 
-active_worker(5)
-non_active_worker(5)
+if __name__ == "__main__":
+    active_worker(5)
+    non_active_worker(5)

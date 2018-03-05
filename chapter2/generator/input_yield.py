@@ -10,11 +10,15 @@ def gen():
         print (value)
         value = yield
 
+def main():
+    print ("=== print gen function ===")
+    g = gen()
 
-print ("=== print gen function ===")
-g = gen()
+    next(g)
+    g.send(3)
+    g.send(5)
+    next(g)
 
-next(g)
-g.send(3)
-g.send(5)
-next(g)
+
+if __name__ == "__main__":
+    main()
