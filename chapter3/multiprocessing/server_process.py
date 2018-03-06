@@ -24,8 +24,7 @@ def worker(v, a, l, d):
 
     d["key"] = "Python3"
 
-
-if __name__ == "__main__":
+def main():
     manager = multiprocessing.Manager()
 
     v = manager.Value("i", 5)
@@ -42,3 +41,7 @@ if __name__ == "__main__":
     print ("[%s] value : %s, dict : %s" % (main_name, v, d["key"]))
     print_array_or_list(main_name, a)
     print_array_or_list(main_name, l)
+
+
+if __name__ == "__main__":
+    main()

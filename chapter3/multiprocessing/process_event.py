@@ -28,8 +28,7 @@ def second_wait(e2):
         if event:
             print ("[%s] e2 is set." % p.name)
 
-
-if __name__ == "__main__":
+def main():
     e1 = multiprocessing.Event()
     e2 = multiprocessing.Event()
 
@@ -46,3 +45,7 @@ if __name__ == "__main__":
     e1.set()
     time.sleep(5)
     print ("Exit")
+
+
+if __name__ == "__main__":
+    main()

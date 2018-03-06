@@ -18,8 +18,7 @@ def get_data(q):
     p = multiprocessing.current_process()
     print ("[%s] get queue data : %s" % (p.name, q.get()))
 
-
-if __name__ == "__main__":
+def main():
     queue = multiprocessing.Queue()
 
     p1 = multiprocessing.Process(name="set_data", target=set_data, args=(queue,))
@@ -30,3 +29,7 @@ if __name__ == "__main__":
 
     p1.join()
     p2.join()
+
+
+if __name__ == "__main__":
+    main()

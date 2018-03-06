@@ -37,10 +37,14 @@ def worker(semaphore, pool):
         time.sleep(1)
         pool.unuse(thread_name)
 
+def main():
+    pool = ResourcePool()
+    semaphore = threading.Semaphore(3)
 
-pool = ResourcePool()
-semaphore = threading.Semaphore(3)
+    for i in range(5):
+        t = threading.Thread(target=worker, name=("thread-%s" % i), args=(semaphore, pool))
+        t.start()
 
-for i in range(5):
-    t = threading.Thread(target=worker, name=("thread-%s" % i), args=(semaphore, pool))
-    t.start()
+
+if __name__ == "__main__":
+    main()

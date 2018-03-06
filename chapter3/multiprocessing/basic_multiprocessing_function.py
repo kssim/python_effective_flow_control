@@ -11,7 +11,11 @@ def worker(count):
     print ("parent pid : %s, pid : %s" % (os.getppid(), os.getpid()))
     print ("")
 
+def main():
+    for i in range(5):
+        p = multiprocessing.Process(target=worker, name="process %i" % i, args=(i,))
+        p.start()
 
-for i in range(5):
-    p = multiprocessing.Process(target=worker, name="process %i" % i, args=(i,))
-    p.start()
+
+if __name__ == "__main__":
+    main()

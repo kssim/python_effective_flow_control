@@ -15,6 +15,11 @@ class Worker(threading.Thread):
         print ("name : %s, argument : %s" % (threading.currentThread().getName(), self.args[0]))
 
 
-for i in range(5):
-    t = Worker(name="thread %i" % i, args=(i,))
-    t.start()
+def main():
+    for i in range(5):
+        t = Worker(name="thread %i" % i, args=(i,))
+        t.start()
+
+
+if __name__ == "__main__":
+    main()

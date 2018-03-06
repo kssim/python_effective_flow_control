@@ -28,18 +28,21 @@ def sender(condition):
         condition.notifyAll()
         logging.debug("End")
 
+def main()
+    condition = threading.Condition()
 
-condition = threading.Condition()
+    for i in range(5):
+        t = threading.Thread(target=receiver, name="receiver %s" % i, args=(condition,))
+        t.start()
 
-for i in range(5):
-    t = threading.Thread(target=receiver, name="receiver %s" % i, args=(condition,))
-    t.start()
+    sender = threading.Thread(target=sender, name="sender", args=(condition,))
 
-sender = threading.Thread(target=sender, name="sender", args=(condition,))
+    time.sleep(1)
+    with condition:
+        condition.notify(1)
 
-time.sleep(1)
-with condition:
-    condition.notify(1)
+    time.sleep(3)
+    sender.start()
 
-time.sleep(3)
-sender.start()
+if __name__ == "__main__":
+    main()

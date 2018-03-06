@@ -11,8 +11,7 @@ def print_initial_msg():
 def worker(data):
     return data * 2
 
-
-if __name__ == "__main__":
+def main():
     pool = multiprocessing.Pool(processes=4, initializer=print_initial_msg)
 
     data_list = range(10)
@@ -22,3 +21,7 @@ if __name__ == "__main__":
     pool.join()
 
     print ("Result : %s" % result)
+
+
+if __name__ == "__main__":
+    main()

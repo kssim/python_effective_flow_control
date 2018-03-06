@@ -29,8 +29,7 @@ def kill_job():
     print ("Exit name:%s, pid:%s" % (p.name, p.pid))
     return 0
 
-
-if __name__ == "__main__":
+def main():
     process_list = []
     for func in [good_job, fail_job, kill_job]:
         p = multiprocessing.Process(name=func.__name__, target=func)
@@ -54,3 +53,7 @@ if __name__ == "__main__":
 
     for p in process_list:
         print ("Process name : %s, exit code : %s" % (p.name, p.exitcode))
+
+
+if __name__ == "__main__":
+    main()

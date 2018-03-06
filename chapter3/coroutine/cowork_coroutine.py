@@ -22,14 +22,18 @@ def worker():
         print ("[%s] Total : %s, work : %s" % (worker_name, total_work_load, work_load))
         yield total_work_load
 
+def main():
+    w1 = worker()
+    w2 = worker()
 
-w1 = worker()
-w2 = worker()
+    ret = TOTAL_WORK_LOAD
+    while ret > 0:
+        next(w1)
+        ret = w1.send(("w1", ret))
 
-ret = TOTAL_WORK_LOAD
-while ret > 0:
-    next(w1)
-    ret = w1.send(("w1", ret))
+        next(w2)
+        ret = w2.send(("w2", ret))
 
-    next(w2)
-    ret = w2.send(("w2", ret))
+
+if __name__ == "__main__":
+    main()

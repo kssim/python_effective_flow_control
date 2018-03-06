@@ -19,6 +19,11 @@ class Worker(multiprocessing.Process):
         print ("")
 
 
-for i in range(5):
-    p = Worker(name="process %i" % i, args=(i,))
-    p.start()
+def main():
+    for i in range(5):
+        p = Worker(name="process %i" % i, args=(i,))
+        p.start()
+
+
+if __name__ == "__main__":
+    main()

@@ -1,5 +1,5 @@
 ###################################
-# File Name : daemon_multiprocessing_join.py
+# File Name : daemon_process_join.py
 ###################################
 #!/usr/bin/python3
 
@@ -12,9 +12,13 @@ def daemon():
     time.sleep(5)
     print ("Exit")
 
-if __name__ == "__main__":
+def main():
     d = multiprocessing.Process(name="daemon", target=daemon)
     d.daemon = True
 
     d.start()
     d.join()
+
+
+if __name__ == "__main__":
+    main()

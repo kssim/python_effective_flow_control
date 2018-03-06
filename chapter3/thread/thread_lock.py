@@ -46,12 +46,16 @@ def nonblocking_lock(lock):
 
     logging.debug("Attempt : %s, grab : %s" % (attempt, grab))
 
+def main():
+    lock = threading.Lock()
 
-lock = threading.Lock()
+    blocking = threading.Thread(target=blocking_lock, name="blocking", args=(lock,))
+    blocking.setDaemon(True)
+    blocking.start()
 
-blocking = threading.Thread(target=blocking_lock, name="blocking", args=(lock,))
-blocking.setDaemon(True)
-blocking.start()
+    nonblocking = threading.Thread(target=nonblocking_lock, name="nonblocking", args=(lock,))
+    nonblocking.start()
 
-nonblocking = threading.Thread(target=nonblocking_lock, name="nonblocking", args=(lock,))
-nonblocking.start()
+
+if __name__ == "__main__":
+    main()

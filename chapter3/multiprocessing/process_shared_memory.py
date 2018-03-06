@@ -16,8 +16,7 @@ def worker(num, num_list):
     for i in range(len(num_list)):
         num_list[i] = num_list[i] * 10
 
-
-if __name__ == "__main__":
+def main():
     single_integer = multiprocessing.Value("i", 5)
     integer_list = multiprocessing.Array("i", range(10))
 
@@ -28,3 +27,7 @@ if __name__ == "__main__":
     print ("num : %s" % (single_integer.value))
     for idx, value in enumerate(integer_list):
         print ("num list[%s] : %s" % (idx, value))
+
+
+if __name__ == "__main__":
+    main()

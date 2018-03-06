@@ -51,18 +51,22 @@ def set_one(lock, end=False):
         if end:
             break
 
+def main():
+    lock = threading.RLock()
 
-lock = threading.RLock()
+    zero = threading.Thread(target=set_zero, name="zero", args=(lock,))
+    zero.setDaemon(True)
+    zero.start()
 
-zero = threading.Thread(target=set_zero, name="zero", args=(lock,))
-zero.setDaemon(True)
-zero.start()
+    one = threading.Thread(target=set_one, name="one", args=(lock,))
+    one.setDaemon(True)
+    one.start()
 
-one = threading.Thread(target=set_one, name="one", args=(lock,))
-one.setDaemon(True)
-one.start()
+    time.sleep(6)
 
-time.sleep(6)
+    reverse  = threading.Thread(target=set_reverse, name="reverse", args=(lock,))
+    reverse.start()
 
-reverse  = threading.Thread(target=set_reverse, name="reverse", args=(lock,))
-reverse.start()
+
+if __name__ == "__main__":
+    main()

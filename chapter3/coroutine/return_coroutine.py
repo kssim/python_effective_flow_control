@@ -11,8 +11,7 @@ def return_one_to_ten():
 def get_coroutine():
     yield return_one_to_ten()
 
-
-if __name__ == "__main__":
+def main():
     print ("== Get coroutine ==")
     c = get_coroutine()
     print (c)
@@ -24,3 +23,7 @@ if __name__ == "__main__":
     print ("== Get values ==")
     print (next(ret))
     print (list(ret))
+
+
+if __name__ == "__main__":
+    main()

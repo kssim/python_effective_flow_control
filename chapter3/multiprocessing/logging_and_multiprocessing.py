@@ -9,8 +9,7 @@ import multiprocessing
 def worker(count):
     print ("count : %s" % count)
 
-
-if __name__ == "__main__":
+def main():
     multiprocessing.log_to_stderr()
     logger = multiprocessing.get_logger()
     logger.setLevel(logging.DEBUG)
@@ -18,3 +17,7 @@ if __name__ == "__main__":
     for i in range(5):
         t = multiprocessing.Process(target=worker, args=(i,))
         t.start()
+
+
+if __name__ == "__main__":
+    main()

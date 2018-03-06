@@ -15,8 +15,12 @@ def daemon():
     time.sleep(5)
     logging.debug("Exit")
 
+def main():
+    t = threading.Thread(name="daemon", target=daemon)
+    t.setDaemon(True)
 
-t = threading.Thread(name="daemon", target=daemon)
-t.setDaemon(True)
+    t.start()
 
-t.start()
+
+if __name__ == "__main__":
+    main()
