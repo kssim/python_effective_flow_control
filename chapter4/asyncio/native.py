@@ -12,9 +12,13 @@ async def print_time(idx):
     await asyncio.sleep(sleep_time)
     print ("[%s] Sleep time : %s, Complete time : %s" % (idx, sleep_time, datetime.datetime.now()))
 
+def main():
+    futures = [print_time(i) for i in range(10)]
 
-futures = [print_time(i) for i in range(10)]
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(asyncio.wait(futures))
+    loop.close()
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(asyncio.wait(futures))
-loop.close()
+
+if __init__ == "__main__":
+    main()

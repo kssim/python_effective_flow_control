@@ -16,9 +16,7 @@ async def run():
 
 async def run_multiple():
     print ("Async Await Comprehension")
-    f1 = run
-    f2 = run
-    func_list = [f1, f2]
+    func_list = [run, run]
 
     result = [await func() for func in func_list]
     print (result)
