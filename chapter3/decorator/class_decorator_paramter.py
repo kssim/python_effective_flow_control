@@ -12,6 +12,7 @@ class MeasureRuntime:
         self.measure_active = active_state
 
     def __call__(self, func):
+
         @wraps(func)
         def wrapper(*args, **kwargs):
             if self.measure_active is False:
@@ -22,6 +23,7 @@ class MeasureRuntime:
             end = time.time()
             print ("'%s' function running time : %s" % (func.__name__, end - start))
             return result
+
         return wrapper
 
 

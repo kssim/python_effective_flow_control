@@ -4,11 +4,13 @@
 #!/usr/bin/python3
 
 def deco(func):
+
     def wrapper():
         print ("before")
         ret = func()
         print ("after")
         return ret
+
     return wrapper
 
 @deco
