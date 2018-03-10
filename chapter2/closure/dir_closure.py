@@ -4,6 +4,7 @@
 #!/usr/bin/python3
 
 def closure():
+
     def inner():
         pass
 

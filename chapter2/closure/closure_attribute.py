@@ -5,6 +5,7 @@
 
 def closure():
     x = 10
+
     def inner():
         y = 20
         return x+y

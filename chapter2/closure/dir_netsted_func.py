@@ -4,6 +4,7 @@
 #!/usr/bin/python3
 
 def nested_func():
+
     def inner():
         pass
 
