@@ -4,6 +4,7 @@
 #!/usr/bin/python3
 
 def partial(func, *partial_args):
+
     def wrapper(*extra_args):
         args = list(partial_args)
         args.extend(extra_args)
