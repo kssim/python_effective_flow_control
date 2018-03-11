@@ -20,5 +20,5 @@ def main():
     loop.close()
 
 
-if __init__ == "__main__":
+if __name__ == "__main__":
     main()

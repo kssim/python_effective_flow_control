@@ -14,7 +14,7 @@ def gen(items):
         yield item
 
 
-if __init__ == "__main__":
+if __name__ == "__main__":
     print ("=== print gen ===")
     for i in gen(range(15)):
         print (i)
