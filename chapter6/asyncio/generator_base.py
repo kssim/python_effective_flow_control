@@ -13,7 +13,7 @@ def print_time(idx):
     yield from asyncio.sleep(sleep_time)
     print ("[%s] Sleep time : %s, Complete time : %s" % (idx, sleep_time, datetime.datetime.now()))
 
-def main()
+def main():
     futures = [print_time(i) for i in range(10)]
 
     loop = asyncio.get_event_loop()

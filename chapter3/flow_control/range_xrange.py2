@@ -9,7 +9,6 @@ def get_type_and_size(value):
 	print ("type : %s" % type(value))
 	print ("size : %d" % sys.getsizeof(value))
 
-
 def main():
     print ("=== Range size : 10 ===")
     get_type_and_size(range(10))

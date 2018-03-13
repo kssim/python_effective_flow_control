@@ -1,5 +1,5 @@
 ###################################
-# File Name : basic_future.py
+# File Name : basic_future.py (Python 3.2 or later)
 ###################################
 #!/usr/bin/python3
 

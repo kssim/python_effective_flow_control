@@ -1,5 +1,5 @@
 ###################################
-# File Name : with_future.py
+# File Name : with_future.py (Python 3.2 or later)
 ###################################
 #!/usr/bin/python3
 
@@ -22,11 +22,11 @@ def main():
         finished, pending = concurrent.futures.wait(future_list, timeout=2,
                                 return_when=concurrent.futures.ALL_COMPLETED)
 
-        for worker in finished:
-            print ("Finished worker : %s" % worker.result())
+        for w in finished:
+            print ("Finished worker : %s" % w.result())
 
-        for worker in pending:
-            print ("Not finished worker : %s" % worker.result())
+        for w in pending:
+            print ("Not finished worker : %s" % w.result())
 
 
 if __name__ == "__main__":

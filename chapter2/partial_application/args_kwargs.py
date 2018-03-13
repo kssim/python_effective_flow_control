@@ -15,10 +15,10 @@ def kwargs_test(**kwargs):
 
 def main():
     args = ["red", "blue", "first", "second"]
-    kargs = {"red":"color", "blue":"color", "first":"number", "second":"number"}
+    kwargs = {"red":"color", "blue":"color", "first":"number", "second":"number"}
 
     args_test(*args)
-    kwargs_test(**kargs)
+    kwargs_test(**kwargs)
 
 
 if __name__ == "__main__":

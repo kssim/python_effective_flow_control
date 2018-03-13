@@ -1,5 +1,5 @@
 ###################################
-# File Name : yield_from.py
+# File Name : yield_from.py (Python 3.3 or later)
 ###################################
 #!/usr/bin/python3
 

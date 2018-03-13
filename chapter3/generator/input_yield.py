@@ -17,7 +17,6 @@ def main():
     next(g)
     g.send(3)
     g.send(5)
-    next(g)
 
 
 if __name__ == "__main__":
