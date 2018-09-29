@@ -1,16 +1,16 @@
 ###################################
 # File Name : thread_rlock.py
 ###################################
-#!/usr/bin/python3
+# !/usr/bin/python3
 
 import time
 import logging
 import threading
 
-
 logging.basicConfig(level=logging.DEBUG, format="(%(threadName)s) %(message)s")
 
 RESOURCE = 0
+
 
 def set_reverse(lock):
     logging.debug("Start batch")
@@ -25,31 +25,36 @@ def set_reverse(lock):
 
     logging.debug("Reversed")
 
+
 def set_zero(lock, end=False):
     logging.debug("Start set zero")
 
     while True:
         with lock:
-            logging.debug("Grab lock and set RESOURCE to 0.")
+            global RESOURCE
             RESOURCE = 0
+            logging.debug("Grab lock and set RESOURCE to %d." % RESOURCE)
             time.sleep(0.5)
         time.sleep(1)
 
         if end:
             break
+
 
 def set_one(lock, end=False):
     logging.debug("Start set one")
 
     while True:
         with lock:
-            logging.debug("Grab lock and set RESOURCE to 1.")
+            global RESOURCE
             RESOURCE = 1
+            logging.debug("Grab lock and set RESOURCE to %d." % RESOURCE)
             time.sleep(0.5)
         time.sleep(1)
 
         if end:
             break
+
 
 def main():
     lock = threading.RLock()
@@ -64,7 +69,7 @@ def main():
 
     time.sleep(6)
 
-    reverse  = threading.Thread(target=set_reverse, name="reverse", args=(lock,))
+    reverse = threading.Thread(target=set_reverse, name="reverse", args=(lock,))
     reverse.start()
 
 
