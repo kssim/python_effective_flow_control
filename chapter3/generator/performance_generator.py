@@ -39,10 +39,8 @@ def sum(items):
     return ret
 
 def generator(loop_count):
-    result = []
     for i in range(loop_count):
-        result.append(i)
-    yield result
+        yield i
 
 def summary(count):
     cpu, mem, runtime = 0, 0, 0
